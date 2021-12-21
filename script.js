@@ -172,4 +172,71 @@ function getListValue (list) {
     return list.val()
 }
 
-//32
+function deactivLink (link) {
+    link.removeAttribute("src")
+}
+
+$(".changeclass")[0].classList = "classChanged"
+
+$('.changeclass').addClass("classaded")
+
+function childrenNumber (el) {
+    i=0
+    for (elem in el){
+       i++
+    }
+    return i
+}
+
+$('#filter').keypress((e) => {
+    if (e.key === "1" || "2" || "3" || "4" || "5" || "6" || "7" || "8" || "9" || "0" || "."){
+        $('#filter')[0].value += e.key
+    }else {
+        return
+    }
+})
+
+
+console.log($('script')[0].src)
+
+function deletespecificline (array, lineIndex) {
+    array.eq(lineIndex).remove()
+}
+
+function defineTextValue (input, text) {
+    input.val(text)
+}
+
+function defineTextHtml (elem,text) {
+    elem.text(text)
+}
+
+function returnClass (el) {
+    return el.classList
+}
+
+function removeDisabled (el) {
+    el.removeAttribute("disabled")
+}
+
+function getWidth (el) {
+    return el.width()
+}
+
+function hoverAnimation (el) {
+    el.addEventListener("hover", function () {
+        this.style.transform = "rotate(20deg)"
+    })
+}
+
+function getAllValue(el) {
+    let allvalue = [];
+    for (elem of el.children) {
+        allvalue.push(elem.val())
+    }
+    return allvalue
+}
+
+function setAttr(el,attr,value) {
+    el.attr(attr,value)
+}
